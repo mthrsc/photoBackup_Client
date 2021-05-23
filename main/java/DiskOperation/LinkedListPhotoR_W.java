@@ -33,7 +33,6 @@ public class LinkedListPhotoR_W {
     public LinkedListPhotoR_W(Context context) {
         this.context = context;
         savePath = context.getFilesDir().toString();
-//        savePath = Environment.getExternalStorageDirectory() + "/testphoto/";
         photoObjectBuilder = new PhotoObjectBuilder(this.context);
         logTool = new LogTool(this.context);
     }
@@ -86,7 +85,6 @@ public class LinkedListPhotoR_W {
             bufferedReader = new BufferedReader(fileReader);
             String line = bufferedReader.readLine();
             while (line != null) {
-//                System.out.println("-----Building po from: " + line);
                 PhotoObject po = photoObjectBuilder.buildFromString(line);
                 photoLL.add(po);
                 line = bufferedReader.readLine();

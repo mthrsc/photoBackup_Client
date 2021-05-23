@@ -54,7 +54,6 @@ public class FolderScan {
     }
 
     private void scanRecursion(ArrayList<File> foldersToScan, FolderList folderList) throws Exception {
-//        System.out.println("--------Starting scanRecExec with foldersToScan.size: " + foldersToScan.size());
         ArrayList<File> currentLocationFiles = new ArrayList<>();
 
         File currentLocation = foldersToScan.get(0);

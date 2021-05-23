@@ -62,7 +62,6 @@ public class LinkedListPhoto<T extends PhotoObject> implements Serializable {   
     public boolean contains(PhotoObject photoObject) {
         boolean b = false;
         for (int i = 0; i < size(); i++) {
-//            System.out.println("----Comparing " + getPhotoObject(i).getFileName() + " with " + photoObject.getFileName());
             if (getPhotoObject(i).toString().equals(photoObject.toString())) {
                 b = true;
                 return b;
@@ -162,9 +161,7 @@ public class LinkedListPhoto<T extends PhotoObject> implements Serializable {   
 
         for (int i = 0; i < size() - 1; i++) {
             temp1 = getPhotoObject(i);
-//            System.out.println("----- sortChronologically - temp1: " + temp1.toString());
             temp2 = getPhotoObject(i + 1);
-//            System.out.println("----- sortChronologically - temp2: " + temp2.toString());
 
             if (temp1.getDateUploaded().compareToIgnoreCase(temp2.getDateUploaded()) < 0) {
                 replace(i, temp2);

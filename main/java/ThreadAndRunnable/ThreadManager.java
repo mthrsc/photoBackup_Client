@@ -118,8 +118,6 @@ public class ThreadManager extends MainActivity {
             @Override
             public void run() {
                 generateGalleryThread.run();
-
-//                generateGalleryThread.updateGalleryView();
             }
         }).start();
     }

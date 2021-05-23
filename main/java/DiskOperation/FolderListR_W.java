@@ -29,7 +29,6 @@ public class FolderListR_W {
 
         Gson g = new Gson();
         File jsonFile = new File(context.getFilesDir().toString(), "FolderList.json");
-//        System.out.println("----Trying to Load JSON from: " + jsonFile);
 
         String json = new String();
         StringBuilder temp = new StringBuilder();

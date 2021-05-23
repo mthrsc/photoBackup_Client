@@ -113,7 +113,6 @@ public class MainActivity2 extends AppCompatActivity {
             serverSettings.setIp(ip);
         } catch (Exception e) {
             logTool.logToFile("saveServerSettings Error getting IPAddress: \n" + e.getMessage());
-//          e.printStackTrace();
             editTextIPAddress.setTextColor(Color.RED);
             allGood = false;
         }

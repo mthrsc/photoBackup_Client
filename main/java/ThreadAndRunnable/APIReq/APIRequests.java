@@ -163,10 +163,7 @@ public class APIRequests {
                 String mediaType = "image/" + filename.substring(filename.lastIndexOf(".") + 1);
                 String sourceFile = poToUpload.getLocationOnDevice();
 
-//                System.out.println("----- fileName: " + filename + " - mediaType: " + mediaType + " - sourceFile: " + sourceFile);
-
                 OkHttpClient client = getClient();
-
 
                 byte[] getBytes = {};
                 File file = new File(sourceFile);
@@ -265,7 +262,6 @@ public class APIRequests {
         String Url = buildUrl("/down/list");
         String responseBody = new String();
 
-//        OkHttpClient client = new OkHttpClient();
         OkHttpClient client = getClient();
 
         Request request = new Request.Builder()
@@ -307,8 +303,6 @@ public class APIRequests {
 
         Response response = client.newCall(request).execute();
         String h1 = response.header("Content-Disposition");
-//        String h2 = response.header("Content-Type");
-//        String h3 = response.header("Content-Length");
 
         String fileName = h1.substring(h1.lastIndexOf("=") + 1);
         InputStream is = response.body().byteStream();
@@ -371,16 +365,6 @@ public class APIRequests {
 
         String json = jsonConvert.convertToJson(po);
 
-//        RequestBody requestBody = new MultipartBody.Builder()
-//                .setType(MultipartBody.FORM)
-//                .addFormDataPart("part", filename, RequestBody.create(getBytes))
-//                .build();
-//
-//        Request request = new Request.Builder()
-//                .url(uploadUrl)
-//                .addHeader("Authorization", auth)  // add request headers
-//                .post(requestBody)
-//                .build();
         MediaType mediaType = MediaType.parse("application/json; charset=utf-8");
         RequestBody requestBody = RequestBody.create(mediaType, json);
 

@@ -30,13 +30,11 @@ public class UploadedListR_W {
 
         Gson g = new Gson();
         File jsonFile = new File(context.getFilesDir().toString(), "UploadedList.json");
-//        System.out.println("----Trying to Load JSON from: " + jsonFile);
 
         String json = new String();
         StringBuilder temp = new StringBuilder();
 
         if (jsonFile.exists()) {
-//            System.out.println("---------UploadedList file exists");
             try {
                 BufferedReader br = new BufferedReader(new FileReader(jsonFile));
                 String line;
@@ -44,11 +42,9 @@ public class UploadedListR_W {
                 while ((line = br.readLine()) != null) {
                     temp.append(line);
                     temp.append('\n');
-//                    System.out.println("---------" + line);
                 }
                 br.close();
                 json = temp.toString();
-//                System.out.println("---------json string read: " + json);
 
             } catch (IOException e) {
                 logTool.logToFile("loadUploadedList Error: \n" + e.getMessage());

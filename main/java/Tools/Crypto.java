@@ -7,10 +7,6 @@ import org.springframework.security.crypto.bcrypt.BCrypt;
  */
 public class Crypto {
 
-//    public boolean verifyPassword(String receivedPassword, String userPassword) {
-//        return BCrypt.checkpw(userPassword, receivedPassword);
-//    }
-
     public String encryptPassword(String password) {
         String encryptedPassword = BCrypt.hashpw(password, BCrypt.gensalt(4));
 
