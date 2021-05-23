@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">RemoteTest</string>
+    <string name="btnTestObject">btnTestObject</string>
+    <string name="save_folder_list">Save folder list</string>
+    <string name="textview">TextView</string>
+    <string name="updatetextview">updateTextView</string>
+    <string name="gallery">Gallery</string>
+    <string name="settings">Settings</string>
+    <string name="switchFolderTest">Switch</string>
+    <string name="password">Password:</string>
+    <string name="ip_address">IP Address:</string>
+    <string name="port_number">Port number:</string>
+    <string name="passwordText">password</string>
+    <string name="ipaddress">IPaddress</string>
+    <string name="_8080">8080</string>
+    <string name="testtesttesttest">testtesttesttest</string>
+    <string name="upload_pictures">Upload pictures</string>
+    <string name="button">Button</string>
+</resources>
